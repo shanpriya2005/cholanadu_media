@@ -5,8 +5,61 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 // Dummy data paths
-const images = Array.from({ length: 34 }, (_, i) => `/images/img${i + 1}.jpg`);
-const videos = Array.from({ length: 10 }, (_, i) => `/videos/video${i + 1}.mp4`);
+const images=[
+  "https://res.cloudinary.com/degljuqjv/image/upload/v1751041390/img1_cse9ze.jpg",
+  "https://res.cloudinary.com/degljuqjv/image/upload/v1751042606/img2_fluoxs.jpg",
+"https://res.cloudinary.com/degljuqjv/image/upload/v1751041410/img3_ldwfus.jpg",
+  "https://res.cloudinary.com/degljuqjv/image/upload/v1751041429/img4_qc6ry7.jpg",
+  "https://res.cloudinary.com/degljuqjv/image/upload/v1751041428/img5_yqrp9h.jpg",
+  "https://res.cloudinary.com/degljuqjv/image/upload/v1751041427/img6_o6ikqo.jpg",
+  "https://res.cloudinary.com/degljuqjv/image/upload/v1751042645/img7_xfzwie.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041429/img8_r7jhr3.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751042630/img9_gvyczt.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041388/img10_nnqfdp.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041391/img11_pqwre6.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041396/img12_gtie2w.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041398/img13_t2mop1.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041401/img14_ctoq0p.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041403/img15_szrkrd.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041394/img16_qjhmps.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041399/img17_tityju.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751042633/img18_odaxjr.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041399/img19_b9pyqh.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041404/img20_ln0qs5.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041404/img21_qqswwt.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751042634/img22_pg0r9g.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751042636/img23_k6ps2x.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041413/img24_yawwkh.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041421/img25_tkwgyx.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041406/img26_lxgxit.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041407/img27_exmspw.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041411/img28_dfua3y.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041415/img29_rxemkf.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041413/img30_ywxrkz.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041417/img31_csmaej.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041415/img32_zqkuqj.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041421/img33_v1pps2.jpg",
+        "https://res.cloudinary.com/degljuqjv/image/upload/v1751041418/img34_t8ofqh.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041422/img35_zty8ym.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041428/img36_nrznbo.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041426/img37_tueqao.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041422/img38_fncxps.jpg",
+    "https://res.cloudinary.com/degljuqjv/image/upload/v1751041423/img39_gdank2.jpg"
+
+]
+const videos = [
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751040016/video1_dmssiu.mp4",
+ "https://res.cloudinary.com/degljuqjv/video/upload/v1751040283/video2_y6yyn2.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751043531/video3_1_zmigav.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751040641/video4_wfa3lz.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751043714/video5_r8ydoq.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751041520/video6_cfuhlu.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751043119/video7_zksm0l.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751040926/video8_ejbtru.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751041010/video9_bckq07.mp4",
+  "https://res.cloudinary.com/degljuqjv/video/upload/v1751041150/video10_w41lym.mp4",
+];
+
 
 // Scoped scrollbar styles
 const scrollbarStyles = `
@@ -128,7 +181,7 @@ const GalleryPage = () => {
                     <img
                       src={src}
                       alt={`Gallery image ${index + 1}`}
-                      loading="lazy"
+                     
                       className="w-full h-auto object-cover transition-transform duration-300 block"
                     />
                   </div>

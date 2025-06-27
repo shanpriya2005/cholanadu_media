@@ -24,4 +24,6 @@ backend
 *.sln
 *.sw
 # Ignore folders inside public
+/public/img/
+/public/videos/
 
