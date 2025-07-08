@@ -21,7 +21,7 @@ const Clients = () => {
         <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
           Trusted by Forward-Thinking Brands
         </h2>
-        <p className="mt-4 text-lg italic text-[#4d4d4d]">
+        <p className="mt-4 text-lg italic text-black">
           We partner with ambitious companies to create amazing things.
         </p>
 

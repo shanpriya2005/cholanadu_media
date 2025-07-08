@@ -58,7 +58,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-[#A66C2D] mt-0.5 group-hover:scale-110 transition-transform" />
                 <a
                   href="mailto:cholanadumediacorporation@gmail.com"
-                  className="text-[#7e5a3c] hover:text-[#5c4631] transition-colors text-md break-all"
+                  className="text-[#7e5a3c] hover:text-[#5c4631]  font-semibold transition-colors text-md break-all"
                 >
                   contactus@cholanadu.in
                 </a>
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li className="flex gap-3 items-start group">
                 <MapPin className="w-5 h-5 text-[#A66C2D] mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <address className="text-[#7e5a3c] text-md not-italic ">
+                <address className="text-[#7e5a3c] text-md font-semibold not-italic ">
                   Cholanadu Media Corporation Pvt Ltd,<br />
                   No 73A, Pammal Main Road,<br />
                   Krishna Nagar, Pallavaram,<br />
@@ -109,7 +109,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <p className="text-sm italic text-[#a0876d] mt-4 leading-relaxed">
+            <p className="text-sm italic text-[#a0876d] mt-4  font-semibold leading-relaxed">
               Stay connected for the latest updates and behind-the-scenes content.
             </p>
           </div>
@@ -119,14 +119,14 @@ const Footer = () => {
         <div className="mt-10 pt-4 border-t border-[#b47d3a]">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-md text-[#a0876d] text-center flex-wrap">
             <p>
-              &copy; {new Date().getFullYear()} CHOLANADU MEDIA. All rights reserved.
+              &copy; {new Date().getFullYear()} CHOLANADU MEDIA CORPORATION PVT LTD. All rights reserved.
             </p>
             <span>|</span>
-            <Link to="/privacy" className="hover:text-[#5c4631] transition-colors">
+            <Link to="" className="hover:text-[#5c4631] transition-colors">
               Privacy Policy
             </Link>
             <span>|</span>
-            <Link to="/terms" className="hover:text-[#5c4631] transition-colors">
+            <Link to="" className="hover:text-[#5c4631] transition-colors">
               Terms of Service
             </Link>
           </div>

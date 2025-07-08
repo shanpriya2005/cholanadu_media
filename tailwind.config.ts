@@ -18,6 +18,9 @@ export default {
       },
     },
     extend: {
+        fontFamily: {
+        mayan: ['Oxanium', 'sans-serif'], // You can replace with another font if you find a better one
+      },
       animation: {
 		 zoomIn: "zoomIn 1s ease-out forwards",
         marquee: "marquee 15s linear infinite",

@@ -14,23 +14,24 @@ const Hero = () => {
             <div className="absolute bottom-40 left-20 w-20 h-20 bg-gradient-to-r from-[#C28840] to-[#A66C2D] rounded-full opacity-15 animate-pulse delay-1000"></div>
           </div>
 
-          <h1 className="mt-20 text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in">
-            Cholanadu Media
-            <span className="block bg-gradient-to-r h-20 from-[#C28840] to-[#A66C2D] bg-clip-text text-transparent">
-              Corporation
-            </span>
-          </h1>
+        <h1 className="mt-20 text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in font-mayan">
+  Cholanadu Media
+  <span className="block">
+    Corporation
+  </span>
+</h1>
+
+
+
+
 
         <p className="text-xl  md:text-2xl text-[#4d4d4d] font-medium leading-relaxed mb-4 max-w-3xl mx-auto animate-fade-in">
-  We influence people with your brand — delivering 
-  <span className="font-semibold text-[#4d4d4d] "> bold</span>, 
-  <span className="font-semibold text-[#4d4d4d]"> creative</span>, and 
-  <span className="font-semibold text-[#4d4d4d]"> result-driven</span> campaigns.
+  We influence people with your brand 
 </p>
 
-<p className="text-lg text-[#2C2C2C] font-normal italic leading-loose max-w-2xl mx-auto mb-4 animate-fade-in">
+<p className="text-lg text-black font-normal italic leading-loose max-w-2xl mx-auto mb-4 animate-fade-in">
   Ready to grow your business? You’ve come the right way.<br />
-  <span className="font-semibold text-[#4d4d4d]">Cholanadu Media Corporation</span> is India’s leading branding and advertising agency.
+  <span className="font-semibold text-black">Cholanadu Media Corporation</span> is India’s leading branding and advertising agency.
 </p>
 
         <span className="text-xl italic mt-4 block text-[#6B4F2D] font-medium tracking-wide animate-fade-in delay-200">

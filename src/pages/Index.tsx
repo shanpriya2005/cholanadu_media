@@ -6,8 +6,10 @@ import Footer from "@/components/Footer";
 import { CheckCircle } from "lucide-react";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
-import SplashScreen from "@/components/SplashScreen"; // Adjust path if needed
-import { ArrowRight, Play, Camera, Video, Palette } from "lucide-react";
+import { Camera, Video, Palette } from "lucide-react";
+import { Link } from "react-router-dom";
+import IntroVideo from "@/components/IntroVideo"; 
+
 
 const MediaHighlights = () => {
   return (
@@ -16,91 +18,78 @@ const MediaHighlights = () => {
         {[
           {
             Icon: Camera,
-            title: "Photography",
-            desc: "Professional Shoots",
+            title: "Branding",
+            desc: "Crafting a strong and memorable brand identity.",
             gradient: "from-[#C28840] to-[#A66C2D]",
           },
           {
             Icon: Video,
-            title: "Film Production",
-            desc: "Cinematic Stories",
+            title: "Advertisement",
+            desc: "Telling your story through compelling visuals.",
             gradient: "from-[#A66C2D] to-[#C28840]",
           },
           {
             Icon: Palette,
-            title: "Brand Design",
-            desc: "Creative Identity",
+            title: "Marketing",
+            desc: "Strategic campaigns that drive real engagement.",
             gradient: "from-[#C28840] to-[#A66C2D]",
           },
         ].map(({ Icon, title, desc, gradient }, i) => (
-          <div
-            key={i}
-            className="
-              text-center 
-              p-8 
-              rounded-lg 
-              bg-white/20 
-              backdrop-blur-md 
-              border 
-              border-[#A66C2D]/50 
-              shadow-md 
-              transform 
-              transition 
-              duration-300 
-              hover:scale-105 
-              hover:shadow-xl
-            "
-          >
-            <div
-              className={`w-14 h-14 bg-gradient-to-r ${gradient} rounded-lg flex items-center justify-center mx-auto mb-5`}
-            >
-              <Icon className="h-7 w-7 text-white" />
+          <Link to="/services" key={i}>
+            <div className="text-center p-8 rounded-lg bg-white/20 backdrop-blur-md border border-[#A66C2D]/50 shadow-md transform transition duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+              <div
+                className={`w-14 h-14 bg-gradient-to-r ${gradient} rounded-lg flex items-center justify-center mx-auto mb-5`}
+              >
+                <Icon className="h-7 w-7 text-white" />
+              </div>
+              <div className="text-2xl font-bold text-foreground mb-1">{title}</div>
+              <div className="text-black text-md">{desc}</div>
             </div>
-            <div className="text-2xl font-bold text-foreground mb-1">{title}</div>
-            <div className="text-muted-foreground  text-[#4d4d4d] text-sm">{desc}</div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
   );
 };
 
+
+// ✅ WhyChooseUs Component
 const WhyChooseUs = () => (
   <section className="py-20 bg-card/30">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="lg:text-center">
-        <h2 className="text-md text-primary font-bold tracking-wide uppercase">
+        <h2 className="text-4xl text-primary font-bold tracking-wide uppercase">
           Why Cholanadu Media
         </h2>
+
         <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-foreground sm:text-4xl">
           One Stop Solution for Advertising & Marketing
         </p>
-        <p className="mt-4 max-w-2xl text-xl  italic text-[#4d4d4d] text-muted-foreground lg:mx-auto">
+        <p className="mt-4 max-w-2xl text-xl italic text-black lg:mx-auto">
           Since 2008, we’ve been helping brands influence the masses by combining strategy, storytelling, and innovation.
         </p>
       </div>
 
       <div className="mt-12">
-        <dl className="grid ml-16 grid-cols-1  md:grid-cols-2 gap-x-4 gap-y-6">
+        <dl className="grid ml-16 grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6">
           {[
-            "Client Decides the Budget",
             "Creating Big Ideas That Stand Out",
+            "Pinpoint Targeted Audience Reach",
             "Ad Films with Unique & Original Scripts",
-            "Video Production Based on Psychographics",
+            "Boost in Sales and Client Profit",
             "High-Quality Standards & Assurance",
             "Custom Strategy for Every Client",
-            "Pinpoint Targeted Audience Reach",
-            "Boost in Sales and Client Profit",
+            "Video Production Based on Psychographics",
+            "Client Decides the Budget",
           ].map((point, idx) => (
-<div className="flex items-center">
-  <div className="flex items-center space-x-4">
-    <div className="h-12 w-12 flex items-center justify-center rounded-md bg-gradient-to-r from-[#C28840] to-[#A66C2D] text-white">
-      <CheckCircle size={22} />
-    </div>
-    <p className="text-lg font-medium text-foreground">{point}</p>
-  </div>
-</div>
-
+            <div className="flex items-center" key={idx}>
+              <div className="flex items-center space-x-4">
+                <div className="h-12 w-12 flex items-center justify-center rounded-md bg-gradient-to-r from-[#C28840] to-[#A66C2D] text-white">
+                  <CheckCircle size={22} />
+                </div>
+                <p className="text-lg font-medium text-foreground">{point}</p>
+              </div>
+            </div>
           ))}
         </dl>
       </div>
@@ -108,17 +97,21 @@ const WhyChooseUs = () => (
   </section>
 );
 
+// ✅ Index (Home Page)
 const Index = () => {
-  const [loading, setLoading] = useState(true);
+  const [showVideo, setShowVideo] = useState(false);
 
-  // Automatically stop loading after 2.5 seconds
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2500);
-    return () => clearTimeout(timer);
+    const visitedBefore = sessionStorage.getItem("visited");
+
+    if (!visitedBefore) {
+      setShowVideo(true);
+      sessionStorage.setItem("visited", "true");
+    }
   }, []);
 
-  if (loading) {
-    return <SplashScreen />;
+  if (showVideo) {
+    return <IntroVideo onFinish={() => setShowVideo(false)} />;
   }
 
   return (

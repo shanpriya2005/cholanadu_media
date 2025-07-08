@@ -39,7 +39,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Office Hours",
-      description: "Mon-Fri: 10AM-6PM",
+      description: "Mon-Fri: 9:00AM-8:00PM",
       link: "#",
       color: "from-[#A66C2D] to-[#C28840]"
     },

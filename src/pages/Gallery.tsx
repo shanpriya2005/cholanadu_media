@@ -94,7 +94,7 @@ const GalleryPage = () => {
           <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in-down">
 
-              Our <span className="bg-gradient-to-r from-[#C28840] to-[#A66C2D] bg-clip-text text-transparent">Gallery</span>
+              Our Gallery
             </h1>
 
             <div className="w-24 h-1 bg-gradient-to-r from-[#C28840] to-[#A66C2D] mx-auto mb-4 rounded-full animate-expand-line"></div>
