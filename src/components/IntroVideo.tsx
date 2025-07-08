@@ -5,7 +5,7 @@ const IntroVideo = ({ onFinish }: { onFinish: () => void }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onFinish(); // Call the function to navigate after video ends
-    }, 21000); // Adjust time based on your video length
+    }, 21000);
 
     return () => clearTimeout(timer);
   }, [onFinish]);
